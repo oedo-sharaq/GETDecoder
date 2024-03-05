@@ -29,7 +29,7 @@ set(GET_SRCS
     src/GETFrameInfo.cc
     src/GETHeaderBase.cc
     src/GETLayeredFrame.cc
-    src/GETLayereHeader.cc
+    src/GETLayerHeader.cc
     src/GETMutantFrame.cc
     src/GETTopologyFrame.cc
     #src_getevt/IEventStore.cc
