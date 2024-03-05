@@ -29,6 +29,7 @@ set(GET_SRCS
     src/GETFrameInfo.cc
     src/GETHeaderBase.cc
     src/GETLayeredFrame.cc
+    src/GETLayereHeader.cc
     src/GETMutantFrame.cc
     src/GETTopologyFrame.cc
     #src_getevt/IEventStore.cc
@@ -65,7 +66,7 @@ set(GET_HEADERS
     include/TGetEventStore.h
     include/GETTopologyFrame.hh
     include/GETMutantFrame.hh
-    include/GETMath.hh
+#    include/GETMath.hh
     include/GETLayerHeader.hh
     include/GETLayeredFrame.hh
     include/GETHeaderBase.hh
