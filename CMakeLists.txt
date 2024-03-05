@@ -62,27 +62,21 @@ set(GET_HEADERS
 #    IProcessorHelper.h
 #    IEventStore.h
 #    TLoop.h
-    TGetEventStore.h
-    GETTopologyFrame.hh
-    GETMutantFrame.hh
-    GETMath.hh
-    GETLayerHeader.hh
-    GETLayeredFrame.hh
-    GETHeaderBase.hh
-    GETFrameInfo.hh
-    GETFileChecker.hh
-    GETDecoder.hh
-    GETCoboFrame.hh
-    GETBasicFrame.hh
-    GETBasicFrameHeader.hh
+    include/TGetEventStore.h
+    include/GETTopologyFrame.hh
+    include/GETMutantFrame.hh
+    include/GETMath.hh
+    include/GETLayerHeader.hh
+    include/GETLayeredFrame.hh
+    include/GETHeaderBase.hh
+    include/GETFrameInfo.hh
+    include/GETFileChecker.hh
+    include/GETDecoder.hh
+    include/GETCoboFrame.hh
+    include/GETBasicFrame.hh
+    include/GETBasicFrameHeader.hh
 )
 add_library(GETDecoder SHARED ${GET_SRCS})
-
-#target_include_directories(GETDecoder
-#    PUBLIC
-#        $<INSTALL_INTERFACE:include>
-#        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-#)
 
 target_include_directories(GETDecoder PRIVATE ${yaml_cpp_INCLUDEDIR} include)
 target_link_libraries(GETDecoder ${YAML_CPP_LIBRARIES})
@@ -93,15 +87,13 @@ ROOT_GENERATE_DICTIONARY(artget
     MODULE GETDecoder
 )
 
-#set_target_properties(
-#    GETDecoder
-#    PROPERTIES
-#        PUBLIC_HEADER "include/${GET_HEADERS}"
-#)
+set_target_properties(GETDecoder
+    PROPERTIES
+        PUBLIC_HEADER "${GET_HEADERS}"
+)
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libGETDecoder_rdict.pcm DESTINATION lib)
 install(TARGETS GETDecoder
-    INCLUDES DESTINATION include
     LIBRARY DESTINATION lib
-    #PUBLIC_HEADER DESTINATION include
+    PUBLIC_HEADER DESTINATION include
 )
