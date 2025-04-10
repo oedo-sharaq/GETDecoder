@@ -35,7 +35,7 @@ set(GET_SRCS
     #src_getevt/IEventStore.cc
     #src_getevt/TAttParameter.cc
     #src_getevt/TEventHeader.cc
-    src_getevt/TGetEventStore.cc
+    #    src_getevt/TGetEventStore.cc
     #src_getevt/TLoop.cc
     #src_getevt/TProcessor.cc
     #src_getevt/TRawDataFadc.cc
@@ -63,7 +63,7 @@ set(GET_HEADERS
 #    IProcessorHelper.h
 #    IEventStore.h
 #    TLoop.h
-    include/TGetEventStore.h
+#    include/TGetEventStore.h
     include/GETTopologyFrame.hh
     include/GETMutantFrame.hh
 #    include/GETMath.hh

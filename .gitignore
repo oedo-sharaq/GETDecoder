@@ -1,0 +1,6 @@
+*
+!.gitignore
+!CMakeLists.txt
+!src
+!include
+!src_getevt
